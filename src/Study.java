@@ -14,17 +14,10 @@ public class Study {
     private String nama_mahasiswa;
     private int jumlahPutaran;
     private int jum_waktu;
-    
-    public void setNim(String nim){
+    public Study(String nim, String nama_mahasiswa, int jumlahPutaran,int jum_waktu){
         this.nim = nim;
-    }
-    public void setNama_Mahasiswa(String nama_mahasiswa){
         this.nama_mahasiswa = nama_mahasiswa;
-    }
-    public void setJumlahPutaran(int jumlahPutaran){
         this.jumlahPutaran = jumlahPutaran;
-    }
-    public void setJum_Waktu(int jum_waktu){
         this.jum_waktu = jum_waktu;
     }
     public void show(){
@@ -35,8 +28,5 @@ public class Study {
     }
     void Tampil(Lap y, int b){
         System.out.print(nama_mahasiswa+" "+hitungJarak(y,b));
-    }
-    int hitungSatu(Lap v, int c){
-        return hitungJarak(v,c)/jum_waktu;
     }
 }
