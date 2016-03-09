@@ -35,7 +35,6 @@ public class MainStudy {
             
             String Coba = w+","+x+","+y+","+z;
             String[] Contoh = Coba.split(",");
-            
             int satu = Integer.parseInt(Contoh[4]);
             int dua = Integer.parseInt(Contoh[6]);
             
@@ -50,10 +49,26 @@ public class MainStudy {
         System.out.println();
         System.out.println("---OUTPUT---");
         for (int i=0; i<jum_mhs; i++) {
-            a[i].Tampil(b,i);
+            a[i].Tampil(b);
             System.out.println();
         }
         System.out.println();
+        int hasil[] = new int[jum_mhs];
+        int max;
+        for(int i=0;i<jum_mhs;i++){
+            hasil[i]=a[i].getMenang();
+            }
         
+            if (a[0].getMenang() > a[1].getMenang()){ 
+                    max = hasil[0];
+                    System.out.print(a[0].getNama());
+            } else if (a[1].getMenang()>a[2].getMenang()){
+                    max = hasil[1];
+                    System.out.print(a[1].getNama());
+            } else 
+                    max = hasil[2];
+                    System.out.print(a[2].getNama());
+        
+            System.out.println();
     }
 }

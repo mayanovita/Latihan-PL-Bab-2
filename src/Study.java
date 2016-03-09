@@ -14,19 +14,28 @@ public class Study {
     private String nama_mahasiswa;
     private int jumlahPutaran;
     private int jum_waktu;
+    int  hasil;
+
     public Study(String nim, String nama_mahasiswa, int jumlahPutaran,int jum_waktu){
         this.nim = nim;
         this.nama_mahasiswa = nama_mahasiswa;
         this.jumlahPutaran = jumlahPutaran;
         this.jum_waktu = jum_waktu;
     }
-    public void show(){
-        System.out.println(nim+", "+nama_mahasiswa+", "+jumlahPutaran+", "+jum_waktu);
-    }
-    int hitungJarak(Lap x, int a){
+    int hitungJarak(Lap x){
         return x.hitungKeliling()*jumlahPutaran;
     }
-    void Tampil(Lap y, int b){
-        System.out.print(nama_mahasiswa+" "+hitungJarak(y,b));
+    void Tampil(Lap y){
+        System.out.print(nama_mahasiswa+" "+hitungJarak(y));
     }
+    void hitungMenang(Lap z){
+        hasil=hitungJarak(z)/jum_waktu;
+    }
+    int getMenang(){
+        return hasil;
+    }
+    public String getNama(){
+        return this.nama_mahasiswa;
+    }
+    
 }

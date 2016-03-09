@@ -1,0 +1,4 @@
+class    : Lap, Study
+object   : b , a[]
+method   : hitungKeliling, hitungJarak, Tampil, hitungMenang, getMenang, getNama
+attribut : nim, nama_mahasiswa, jumlahPutaran, jum_waktu, hasil
